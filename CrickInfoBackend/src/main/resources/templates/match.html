@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Matches</title>
+</head>
+<body>
+<h1>Matches</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Team Heading</th>
+        <th>Match Number Venue</th>
+        <!-- Add more columns as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="match : ${matches}">
+        <td th:text="${match.teamHeading}"></td>
+        <td th:text="${match.matchNumberVenue}"></td>
+        <!-- Add more cells as needed -->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

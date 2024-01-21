@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Matches</title>
+</head>
+<body>
+<h1>Live Matches</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Teams</th>
+        <th>Venue</th>
+        <th>Batting Team</th>
+        <th>Score</th>
+        <th>Bowling Team</th>
+        <th>Bowling Team Score</th>
+        <th>Live Text</th>
+        <th>Match Link</th>
+        <th>Text Complete</th>
+        <th>Match Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="match : ${match}">
+        <td th:text="${match.teamHeading}"></td>
+        <td th:text="${match.matchNumberVenue}"></td>
+        <td th:text="${match.battingTeam}"></td>
+        <td th:text="${match.battingTeamScore}"></td>
+        <td th:text="${match.bowlTeam}"></td>
+        <td th:text="${match.bowlTeamScore}"></td>
+        <td th:text="${match.liveText}"></td>
+        <td th:text="${match.matchLink}"></td>
+        <td th:text="${match.textComplete}"></td>
+        <td th:text="${match.matchStatus}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
